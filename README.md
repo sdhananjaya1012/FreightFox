@@ -77,17 +77,26 @@ Set Up the Database:
 Configure the database connection in application.yml.
 Example:
 
+
+
 spring:
+
   datasource:
+  
     url: jdbc:mysql://localhost:3306/dispatch_load_balancer
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+     username: root
+     
+     password: root
+     
+     driver-class-name: com.mysql.cj.jdbc.Driver
 
   apis:
   openWeather:
+  
     baseUrl: 'https://api.openweathermap.org'
-    api-key: 'ba85959225b1b84b9f74098f60683473'
+    
+    api-key: 'you-api=key'
 
 
 Run database migrations 
