@@ -60,7 +60,7 @@ Local Database: For persisting orders, vehicles, and weather data.
 Setup and Installation
 
 Clone the Repository:git clone https://github.com/sdhananjaya1012/FreightFox.git
-cd FreightFox
+
 
 
 Install Dependencies:Ensure you have Maven installed, then run:mvn clean install
