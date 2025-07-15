@@ -74,10 +74,20 @@ Add the API key to the application.yml :openweather.api.key=your_api_key_here
 
 
 Set Up the Database:
-Configure the database connection in application.properties.
-Example:spring.datasource.url=jdbc:mysql://localhost:3306/freightfox
-spring.datasource.username=root
-spring.datasource.password=your_password
+Configure the database connection in application.yml.
+Example:
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dispatch_load_balancer
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  apis:
+  openWeather:
+    baseUrl: 'https://api.openweathermap.org'
+    api-key: 'ba85959225b1b84b9f74098f60683473'
 
 
 Run database migrations 
