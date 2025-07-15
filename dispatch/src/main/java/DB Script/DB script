@@ -1,0 +1,29 @@
+CREATE TABLE `orders` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `order_id` varchar(255) DEFAULT NULL,
+  `latitude` double NOT NULL,
+  `longitude` double NOT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `package_weight` double NOT NULL,
+  `priority` enum('HIGH','MEDIUM','LOW') NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_order_id` (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `pincodes` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `latitude` double DEFAULT NULL,
+  `longitude` double DEFAULT NULL,
+  `pincode` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `vehicles` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `vehicle_id` varchar(255) NOT NULL,
+  `capacity` double NOT NULL,
+  `current_latitude` double NOT NULL,
+  `current_longitude` double NOT NULL,
+  `current_address` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
